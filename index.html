@@ -1,141 +1,520 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Modern</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <h1 class="logo"><span>Portfolio</span></h1>
-      <ul class="nav-links">
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#project">Projek</a></li>
-        <li><a href="#contact">Kontak</a></li>
-      </ul>
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+    
+    <!-- Particle Background -->
+    <div id="particles-container"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="folder.image/logo.png" alt="Rowlet" class="rowlet-logo">
+            </div>
+            <div class="loading-text">Loading Portfolio...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <img src="folder.image/logo.png" alt="Rowlet" class="rowlet-logo-nav">
+                </div>
+                <span class="logo-text">I Wayan Dio Arika Putra</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-text="Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h1>Hai, Saya <span>Yogi Widi Putrawan</span></h1>
-      <h2 class="subtitle">Web Developer | UI Designer | Tech Enthusiast</h2>
-      <div class="hero-image">
-        <img src="img/foto.png" alt="Foto Profil">
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name" id="heroName">I Wayan Dio Arika Putra</span>
+                    <span class="title-role" id="heroRole">Beginner Developer</span>
+                </h1>
+                <p class="hero-description" id="heroDesc">
+                    Crafting digital experiences with the wisdom of Rowlet<br>
+                    Passionate about creating beautiful, functional web applications
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="profile-container">
+                    <div class="profile-ring"></div>
+                    <div class="profile-image">
+                        <div class="avatar">
+                            <img src="folder.image/logo.png" alt="Rowlet" class="rowlet-avatar">
+                        </div>
+                        <div class="status-indicator"></div>
+                    </div>
+                    <div class="floating-icons">
+                        <div class="icon icon-1">⚡</div>
+                        <div class="icon icon-2">🚀</div>
+                        <div class="icon icon-3">💡</div>
+                        <div class="icon icon-4">🎨</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2 class="section-title">Tentang Saya</h2>
-    <p>
-      Saya adalah seorang pengembang web pemula yang suka bereksperimen dengan desain modern
-      dan teknologi terbaru. Tujuan saya adalah membangun website yang interaktif, responsif, dan user-friendly.
-    </p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-aos="fade-up">About Me</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Discover my journey and passion for development
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="text-block">
+                        <h3>My Story</h3>
+                        <p>Like Rowlet, I approach development with curiosity and wisdom. I believe in creating digital experiences that are not only functional but also delightful and meaningful.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3>What I Do</h3>
+                        <p>I specialize in full-stack development, with a passion for modern web technologies, user experience design, and creating scalable applications that make a difference.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="3">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="25">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="visual-container">
+                        <div class="code-window">
+                            <div class="window-header">
+                                <div class="window-controls">
+                                    <span class="control red"></span>
+                                    <span class="control yellow"></span>
+                                    <span class="control green"></span>
+                                </div>
+                                <div class="window-title">developer.js</div>
+                            </div>
+                            <div class="code-content">
+                                <div class="code-line">
+                                    <span class="keyword">const</span> 
+                                    <span class="variable">developer</span> = {
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="property">name</span>: 
+                                    <span class="string">'I Wayan Dio Arika Putra'</span>,
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="property">skills</span>: [
+                                    <span class="string">'React'</span>, 
+                                    <span class="string">'Node.js'</span>],
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="property">passion</span>: 
+                                    <span class="string">'Creating Amazing UX'</span>,
+                                </div>
+                                <div class="code-line indent">
+                                    <span class="property">coffee</span>: 
+                                    <span class="boolean">true</span>
+                                </div>
+                                <div class="code-line">};</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Tabel Data Diri -->
-    <table class="data-table">
-      <tr>
-        <th>Data Diri</th>
-        <th>Keterangan</th>
-      </tr>
-      <tr>
-        <td>Nama</td>
-        <td>Yogi Widi Putrawan</td>
-      </tr>
-      <tr>
-        <td>Tempat, Tanggal Lahir</td>
-        <td>Badung, 12 Mei 2001</td>
-      </tr>
-      <tr>
-        <td>Alamat</td>
-        <td>Jl. Raya Kampus Udayana No. 20, Jimbaran</td>
-      </tr>
-      <tr>
-        <td>Email</td>
-        <td>yogi@masyupi.com</td>
-      </tr>
-      <tr>
-        <td>Telepon/WhatsApp</td>
-        <td>+62 853 3666 7980</td>
-      </tr>
-      <tr>
-        <td>Media Sosial</td>
-        <td>Instagram: @egyputd | GitHub: github.com/egyputd</td>
-      </tr>
-    </table>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Technologies I work with
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon">🎨</div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CSS/SCSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Vue.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon">⚙️</div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <div class="category-icon">🛠️</div>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="72"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="68"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Projects -->
-  <section id="project" class="section">
-    <h2 class="section-title">Projek Saya</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Projek 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi, pariatur nulla illum a vero facilis sunt
-          quam corrupti qui officiis fugiat! Libero optio voluptatum magni quaerat. Optio, reiciendis at!</p>
-      </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Some of my recent work
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>👁️</span>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <span>📝</span>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-preview">🌐</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web Application</div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce solution with modern UI, secure payments, and real-time inventory management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>👁️</span>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <span>📝</span>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-preview">📱</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Mobile App</div>
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A productivity app with drag-and-drop functionality, team collaboration, and smart notifications.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <span>👁️</span>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <span>📝</span>
+                                    <span>Source Code</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-preview">🤖</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">AI/ML</div>
+                        <h3 class="project-title">AI Chat Assistant</h3>
+                        <p class="project-description">
+                            An intelligent chatbot with natural language processing and machine learning capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="project-card">
-        <h3>Projek 2</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi, pariatur nulla illum a vero facilis sunt
-          quam corrupti qui officiis fugiat! Libero optio voluptatum magni quaerat. Optio, reiciendis at!</p>
-      </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-aos="fade-up">Let's Work Together</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Ready to bring your ideas to life?
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>dioarika734@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+62 821-4784-5456</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Jl.Pantai Suluban</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank">
+                            <span>💼</span>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <span>🐙</span>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <span>🐦</span>
+                        </a>
+                        <a href="#" class="social-link" target="_blank">
+                            <span>📷</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" data-aos="fade-left" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                        <div class="form-line"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading">Sending...</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-      <div class="project-card">
-        <h3>Projek 3</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi, pariatur nulla illum a vero facilis sunt
-          quam corrupti qui officiis fugiat! Libero optio voluptatum magni quaerat. Optio, reiciendis at!</p>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Dio. Crafted with 💚 and Rowlet wisdom.</p>
+                </div>
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <img src="folder.image/logo.png" alt="Rowlet" class="rowlet-logo-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Kegiatan -->
-  <section id="kegiatan" class="section">
-    <h2 class="section-title">Kegiatan Saya</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Kegiatan 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi, pariatur nulla illum a vero facilis sunt
-          quam corrupti qui officiis fugiat! Libero optio voluptatum magni quaerat. Optio, reiciendis at!</p>
-      </div>
-
-      <div class="project-card">
-        <h3>Kegiatan 2</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi, pariatur nulla illum a vero facilis sunt
-          quam corrupti qui officiis fugiat! Libero optio voluptatum magni quaerat. Optio, reiciendis at!</p>
-      </div>
-
-      <div class="project-card">
-        <h3>Kegiatan 3</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure excepturi, pariatur nulla illum a vero facilis sunt
-          quam corrupti qui officiis fugiat! Libero optio voluptatum magni quaerat. Optio, reiciendis at!</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Kontak</h2>
-    <form id="contactForm" class="contact-form">
-      <input type="text" placeholder="Nama" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Pesan Anda" required></textarea>
-      <button type="submit" class="btn">Kirim</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Dibuat dengan ❤️ oleh Saya</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
